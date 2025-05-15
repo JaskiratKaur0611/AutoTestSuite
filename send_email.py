@@ -20,7 +20,7 @@ def send_email(zip_path):
     """Sends an email with the Allure report zip as an attachment."""
     sender_email = "jaskiratkaur0611@gmail.com"
     receiver_email = "jaskkaur03@gmail.com"
-    password = "smql eipb jyck qnqd"  # (not your Gmail password, use App password)
+    password = " "  # (use App password)
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
