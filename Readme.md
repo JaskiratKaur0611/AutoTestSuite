@@ -10,7 +10,6 @@ A professional-grade automation test suite built using **Robot Framework**, inte
 - Automated login, search, cart, checkout flow
 - Video recording of test executions
 - Allure HTML reports
-- GitHub Actions workflow trigger on code push
 - Email delivery of test reports
 
 ## 📦 Tech Stack
@@ -23,3 +22,6 @@ A professional-grade automation test suite built using **Robot Framework**, inte
 ## ▶️ Run Locally
 
 Run commands mentioned in run.txt
+
+##  Future Scope
+Integration of CI/CD pipeline using GitHub Actions or Jenkins 
