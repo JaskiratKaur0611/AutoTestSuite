@@ -4,8 +4,7 @@ A professional-grade automation test suite built using **Robot Framework**, inte
 - Allure Reporting
 - FFmpeg-based Test Run Video Recording
 - Email Notifications with Report Attachments
-- Self-Healing Tests (Planned)
-- CI/CD with GitHub Actions
+- Self-Healing Tests 
 
 ## 📁 Features
 - Automated login, search, cart, checkout flow
@@ -18,8 +17,8 @@ A professional-grade automation test suite built using **Robot Framework**, inte
 - Python 3.10+
 - Robot Framework
 - SeleniumLibrary
-- Allure + FFmpeg
-- GitHub Actions
+- Allure
+- FFmpeg
 
 ## ▶️ Run Locally
 
