@@ -1,0 +1,9 @@
+pip install -r requirements.txt
+python cleanup.py
+robot --listener allure_robotframework:results/allure .\tests\
+allure generate results/allure -o allure-report --clean
+allure open allure-report
+python send_email.py
+
+
+

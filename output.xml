@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.3 on win32)" generated="2025-05-13T10:48:47.825844" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests">
+<suite id="s1-s1" name="1 Login Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests\1_login_tests.robot">
+<test id="s1-s1-t1" name="Valid User Can Log In Successfully" line="11">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:48:49.393544" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:48:48.392987" elapsed="1.000557"/>
+</kw>
+<kw name="Open Login Page" owner="login_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:48:49.394561" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-05-13T10:48:54.914453" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-13T10:48:49.394561" elapsed="11.199195"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-13T10:49:00.593756" elapsed="0.056812"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:login2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:49:00.651419" elapsed="0.053284"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:48:49.394561" elapsed="11.311472"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="login_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:00.706033" level="INFO">Clicking element 'id:login2'.</msg>
+<arg>id:login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:00.706033" elapsed="0.117575"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:02.827455" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:00.825990" elapsed="2.001465"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:02.827455" level="INFO">Typing text 'new__user' into text field 'id:loginusername'.</msg>
+<arg>id:loginusername</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:02.827455" elapsed="0.146359"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:02.973814" level="INFO">Typing text 'new__user' into text field 'id:loginpassword'.</msg>
+<arg>id:loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:02.973814" elapsed="0.170223"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:03.146769" level="INFO">Clicking button 'xpath://*[@onclick='logIn()']'.</msg>
+<arg>xpath://*[@onclick='logIn()']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:03.146769" elapsed="0.142931"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>id:nameofuser</arg>
+<arg>Welcome ${USERNAME}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-05-13T10:49:03.303479" elapsed="1.932976"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:00.706033" elapsed="4.530422"/>
+</kw>
+<kw name="Close Browser Session" owner="login_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-13T10:49:05.236455" elapsed="2.293559"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:05.236455" elapsed="2.293559"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:10.530571" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:07.530014" elapsed="3.000557"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:48:48.392987" elapsed="22.139139"/>
+</test>
+<status status="PASS" start="2025-05-13T10:48:47.920286" elapsed="22.622841"/>
+</suite>
+<suite id="s1-s2" name="2 Db Validation Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests\2_db_validation_tests.robot">
+<test id="s1-s2-t1" name="Validate User Info In DB" line="10">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:13.604495" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:10.604110" elapsed="3.000385"/>
+</kw>
+<kw name="Connect To Database Postgres" owner="db_keywords">
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2025-05-13T10:49:13.607500" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2025-05-13T10:49:13.607500" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2025-05-13T10:49:13.638172" level="INFO">Connect to DB using : psycopg2.connect(database='ecommerce', user='postgres', password=***, host='localhost', port=5432)</msg>
+<arg>psycopg2</arg>
+<arg>${DB_NAME}</arg>
+<arg>${DB_USER}</arg>
+<arg>${DB_PASSWORD}</arg>
+<arg>${DB_HOST}</arg>
+<arg>${DB_PORT}</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.607500" elapsed="0.093497"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:13.606009" elapsed="0.110622"/>
+</kw>
+<kw name="Verify User Exists In Database" owner="db_keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-13T10:49:13.716631" level="INFO">${USERNAME} = john_doe</msg>
+<var>${USERNAME}</var>
+<arg>john_doe</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.716631" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-13T10:49:13.716631" level="INFO">${query} = SELECT * FROM users WHERE username='john_doe'</msg>
+<var>${query}</var>
+<arg>SELECT * FROM users WHERE username='${USERNAME}'</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.716631" elapsed="0.000000"/>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2025-05-13T10:49:13.716631" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT * FROM users WHERE username='john_doe'&lt;/code&gt;</msg>
+<msg time="2025-05-13T10:49:13.748397" level="INFO">Commit the transaction</msg>
+<msg time="2025-05-13T10:49:13.748397" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;username&lt;/th&gt;&lt;th scope="col" style="background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;email&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;john_doe&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;john@example.com&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2025-05-13T10:49:13.748397" level="INFO">${result} = [(1, 'john_doe', 'john@example.com')]</msg>
+<var>${result}</var>
+<arg>${query}</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.716631" elapsed="0.031766"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-05-13T10:49:13.764141" level="INFO">Length is 1.</msg>
+<arg>${result}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.748397" elapsed="0.015744"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:13.716631" elapsed="0.048110"/>
+</kw>
+<kw name="Disconnect From Database Postgres" owner="db_keywords">
+<kw name="Disconnect From Database" owner="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.764741" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:13.764741" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:15.765353" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:13.764741" elapsed="2.000612"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:10.591311" elapsed="5.174042"/>
+</test>
+<status status="PASS" start="2025-05-13T10:49:10.543127" elapsed="5.232283"/>
+</suite>
+<suite id="s1-s3" name="3 Product Search Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests\3_product_search_tests.robot">
+<test id="s1-s3-t1" name="User Can View Phones Category" line="10">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:20.807375" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:15.806811" elapsed="5.000564"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:20.807375" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-05-13T10:49:21.821215" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-13T10:49:20.807375" elapsed="4.912503"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-13T10:49:25.726890" elapsed="0.046818"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:27.775726" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:25.775027" elapsed="2.000699"/>
+</kw>
+<kw name="Smart Click" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:49:27.776857" elapsed="0.047292"/>
+</kw>
+<msg time="2025-05-13T10:49:27.824149" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:49:27.776857" elapsed="0.047292"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:27.824149" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:27.824149" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:27.824149" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:49:27.824149" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:49:27.824149" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:27.824149" level="INFO">Clicking element 'xpath://a[text()='Phones']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:27.824149" elapsed="0.109261"/>
+</kw>
+<arg>xpath://a[text()='Phones']</arg>
+<status status="PASS" start="2025-05-13T10:49:27.776857" elapsed="0.156996"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath://h4[@class='card-title']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-13T10:49:27.933853" elapsed="0.024408"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:29.958629" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:27.958261" elapsed="2.000368"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:29.981676" level="INFO">Current page contains text 'Samsung galaxy s6'.</msg>
+<arg>Samsung galaxy s6</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-13T10:49:29.958629" elapsed="0.023047"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:30.981959" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:29.981676" elapsed="1.000554"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-13T10:49:30.984399" elapsed="2.255814"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:38.240277" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:33.240213" elapsed="5.000064"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:15.806811" elapsed="22.433466"/>
+</test>
+<status status="PASS" start="2025-05-13T10:49:15.775410" elapsed="22.464867"/>
+</suite>
+<suite id="s1-s4" name="4 Cart Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests\4_cart_tests.robot">
+<test id="s1-s4-t1" name="User Can Add Product To Cart" line="13">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:43.266563" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:38.265208" elapsed="5.001355"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:43.266563" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-05-13T10:49:43.592196" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-13T10:49:43.266563" elapsed="4.956640"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-13T10:49:48.223203" elapsed="0.054598"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:50.278352" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:48.277801" elapsed="2.000551"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Samsung galaxy s6']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-13T10:49:50.278352" elapsed="0.022669"/>
+</kw>
+<kw name="Smart Click" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:49:50.301021" elapsed="0.032219"/>
+</kw>
+<msg time="2025-05-13T10:49:50.333240" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:49:50.301021" elapsed="0.032219"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:50.333240" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:50.333240" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:50.333240" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:49:50.333240" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:49:50.333240" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:50.333240" level="INFO">Clicking element 'xpath=//a[text()='Samsung galaxy s6']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:50.333240" elapsed="1.615116"/>
+</kw>
+<arg>xpath=//a[text()='Samsung galaxy s6']</arg>
+<status status="PASS" start="2025-05-13T10:49:50.301021" elapsed="1.647335"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//a[text()='Add to cart']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-13T10:49:51.948356" elapsed="1.133615"/>
+</kw>
+<kw name="Smart Click" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:49:53.081971" elapsed="0.062944"/>
+</kw>
+<msg time="2025-05-13T10:49:53.144915" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:49:53.081971" elapsed="0.062944"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:53.160588" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:53.160588" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:49:53.160588" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:49:53.160588" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:49:53.160588" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:53.160588" level="INFO">Clicking element 'xpath=//a[text()='Add to cart']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:49:53.160588" elapsed="0.219178"/>
+</kw>
+<arg>xpath=//a[text()='Add to cart']</arg>
+<status status="PASS" start="2025-05-13T10:49:53.081971" elapsed="0.298399"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:55.381132" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:53.380370" elapsed="2.000762"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:49:55.381132" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-05-13T10:49:55.381132" elapsed="0.014674"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:49:58.400131" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:49:55.399383" elapsed="3.000748"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-13T10:49:58.400131" elapsed="2.219027"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:49:38.265208" elapsed="22.354870"/>
+</test>
+<status status="PASS" start="2025-05-13T10:49:38.249440" elapsed="22.378851"/>
+</suite>
+<suite id="s1-s5" name="5 Checkout Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests\5_checkout_tests.robot">
+<test id="s1-s5-t1" name="User Can Place Order" line="10">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:05.655009" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:00.654321" elapsed="5.000688"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:05.657190" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-05-13T10:50:05.970298" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-13T10:50:05.657190" elapsed="4.534552"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-13T10:50:10.191742" elapsed="0.034583"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:12.226983" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:10.226325" elapsed="2.000658"/>
+</kw>
+<kw name="Smart Click" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:12.230176" elapsed="0.029829"/>
+</kw>
+<msg time="2025-05-13T10:50:12.260005" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:12.230176" elapsed="0.029829"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:12.260005" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:12.260005" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:12.260005" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:12.260005" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:12.260005" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:12.260005" level="INFO">Clicking element 'xpath://a[text()='Cart']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:12.260005" elapsed="1.142696"/>
+</kw>
+<arg>xpath://a[text()='Cart']</arg>
+<status status="PASS" start="2025-05-13T10:50:12.230176" elapsed="1.180114"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:13.410290" level="INFO">Clicking button 'xpath://button[text()='Place Order']'.</msg>
+<arg>xpath://button[text()='Place Order']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:13.410290" elapsed="0.181043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:13.591333" elapsed="0.275425"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:13.866758" elapsed="0.047106"/>
+</kw>
+<msg time="2025-05-13T10:50:13.915885" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:13.866758" elapsed="0.049127"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:13.915885" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:13.915885" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:13.915885" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:13.915885" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:13.915885" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:13.915885" level="INFO">Typing text 'John Doe' into text field 'id:name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:13.915885" elapsed="0.250607"/>
+</kw>
+<arg>id:name</arg>
+<arg>John Doe</arg>
+<status status="PASS" start="2025-05-13T10:50:13.866758" elapsed="0.299734"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.166492" elapsed="0.042218"/>
+</kw>
+<msg time="2025-05-13T10:50:14.208710" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.166492" elapsed="0.042218"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.214128" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.215245" elapsed="0.000288"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.215673" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:14.208710" elapsed="0.006963"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:14.208710" elapsed="0.006963"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:14.215673" level="INFO">Typing text 'USA' into text field 'id:country'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.215673" elapsed="0.183630"/>
+</kw>
+<arg>id:country</arg>
+<arg>USA</arg>
+<status status="PASS" start="2025-05-13T10:50:14.166492" elapsed="0.232811"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.399303" elapsed="0.035654"/>
+</kw>
+<msg time="2025-05-13T10:50:14.443063" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.399303" elapsed="0.043760"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.443063" elapsed="0.003585"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.446648" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.446648" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:14.443063" elapsed="0.003585"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:14.443063" elapsed="0.003585"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:14.449059" level="INFO">Typing text 'New York' into text field 'id:city'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.449059" elapsed="0.229176"/>
+</kw>
+<arg>id:city</arg>
+<arg>New York</arg>
+<status status="PASS" start="2025-05-13T10:50:14.399303" elapsed="0.280564"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.684388" elapsed="0.037823"/>
+</kw>
+<msg time="2025-05-13T10:50:14.727063" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.684388" elapsed="0.042675"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.730319" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.733200" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.733200" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:14.730319" elapsed="0.002881"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:14.730319" elapsed="0.002881"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:14.733200" level="INFO">Typing text '1234567890' into text field 'id:card'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.733200" elapsed="0.165615"/>
+</kw>
+<arg>id:card</arg>
+<arg>1234567890</arg>
+<status status="PASS" start="2025-05-13T10:50:14.682353" elapsed="0.216462"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.898815" elapsed="0.044016"/>
+</kw>
+<msg time="2025-05-13T10:50:14.942831" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.898815" elapsed="0.044016"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.946183" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.947765" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:14.947765" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:14.946183" elapsed="0.001582"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:14.942831" elapsed="0.004934"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:14.947765" level="INFO">Typing text '04' into text field 'id:month'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:14.947765" elapsed="0.168924"/>
+</kw>
+<arg>id:month</arg>
+<arg>04</arg>
+<status status="PASS" start="2025-05-13T10:50:14.898815" elapsed="0.230655"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:15.133197" elapsed="0.032673"/>
+</kw>
+<msg time="2025-05-13T10:50:15.165870" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:15.133197" elapsed="0.032673"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:15.165870" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:15.165870" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:15.165870" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:15.165870" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:15.165870" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:15.176923" level="INFO">Typing text '2025' into text field 'id:year'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:15.176923" elapsed="0.171596"/>
+</kw>
+<arg>id:year</arg>
+<arg>2025</arg>
+<status status="PASS" start="2025-05-13T10:50:15.132559" elapsed="0.215960"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:17.348954" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:15.348519" elapsed="2.000435"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:17.348954" level="INFO">Clicking button 'xpath://button[text()='Purchase']'.</msg>
+<arg>xpath://button[text()='Purchase']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:17.348954" elapsed="0.210454"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Thank you for your purchase!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-13T10:50:17.560462" elapsed="0.021814"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:17.582276" level="INFO">Clicking button 'xpath://button[text()='OK']'.</msg>
+<arg>xpath://button[text()='OK']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:17.582276" elapsed="0.261877"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-13T10:50:17.844153" elapsed="2.219757"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:25.064513" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:20.063910" elapsed="5.000603"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:50:00.654321" elapsed="24.410192"/>
+</test>
+<status status="PASS" start="2025-05-13T10:50:00.635993" elapsed="24.435631"/>
+</suite>
+<suite id="s1-s6" name="6 Order Validation Tests" source="C:\Users\jaski\PycharmProjects\PythonProject1\tests\6_order_validation_tests.robot">
+<test id="s1-s6-t1" name="Verify Order Confirmation Message" line="10">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:30.089978" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:25.088666" elapsed="5.001312"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:30.089978" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg time="2025-05-13T10:50:30.397238" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-13T10:50:30.089978" elapsed="5.435819"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-13T10:50:35.525797" elapsed="0.042532"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:37.568834" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:35.568329" elapsed="2.000505"/>
+</kw>
+<kw name="Smart Click" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:37.568834" elapsed="0.036605"/>
+</kw>
+<msg time="2025-05-13T10:50:37.605439" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:37.568834" elapsed="0.036605"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:37.610065" elapsed="0.000991"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:37.611056" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:37.611056" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:37.609446" elapsed="0.001610"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:37.609446" elapsed="0.001610"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:37.611056" level="INFO">Clicking element 'xpath://a[text()='Cart']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:37.611056" elapsed="0.876647"/>
+</kw>
+<arg>xpath://a[text()='Cart']</arg>
+<status status="PASS" start="2025-05-13T10:50:37.568834" elapsed="0.918869"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:38.487703" level="INFO">Clicking button 'xpath://button[text()='Place Order']'.</msg>
+<arg>xpath://button[text()='Place Order']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:38.487703" elapsed="0.222642"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:39.713359" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:38.713080" elapsed="1.000279"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.715394" elapsed="0.037590"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.752984" elapsed="0.030365"/>
+</kw>
+<msg time="2025-05-13T10:50:39.783349" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.752984" elapsed="0.030365"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:39.783349" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:39.783349" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:39.783349" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:39.783349" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:39.783349" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:39.783349" level="INFO">Typing text 'Test Name' into text field 'id:name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.783349" elapsed="0.142743"/>
+</kw>
+<arg>id:name</arg>
+<arg>Test Name</arg>
+<status status="PASS" start="2025-05-13T10:50:39.752984" elapsed="0.175138"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.928122" elapsed="0.034349"/>
+</kw>
+<msg time="2025-05-13T10:50:39.962471" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.928122" elapsed="0.034349"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:39.962471" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:39.962471" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:39.962471" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:39.962471" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:39.962471" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:39.962471" level="INFO">Typing text 'USA' into text field 'id:country'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:39.962471" elapsed="0.168967"/>
+</kw>
+<arg>id:country</arg>
+<arg>USA</arg>
+<status status="PASS" start="2025-05-13T10:50:39.928122" elapsed="0.204288"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.134924" elapsed="0.029284"/>
+</kw>
+<msg time="2025-05-13T10:50:40.164208" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.134924" elapsed="0.029284"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.164208" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.164208" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.164208" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:40.164208" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:40.164208" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:40.164208" level="INFO">Typing text 'New York' into text field 'id:city'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.164208" elapsed="0.128405"/>
+</kw>
+<arg>id:city</arg>
+<arg>New York</arg>
+<status status="PASS" start="2025-05-13T10:50:40.132410" elapsed="0.169693"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.302103" elapsed="0.023969"/>
+</kw>
+<msg time="2025-05-13T10:50:40.326072" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.302103" elapsed="0.023969"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.342907" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.342907" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.342907" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:40.341984" elapsed="0.000923"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:40.341984" elapsed="0.000923"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:40.342907" level="INFO">Typing text '1234567890' into text field 'id:card'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.342907" elapsed="0.109685"/>
+</kw>
+<arg>id:card</arg>
+<arg>1234567890</arg>
+<status status="PASS" start="2025-05-13T10:50:40.302103" elapsed="0.157344"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.459447" elapsed="0.033048"/>
+</kw>
+<msg time="2025-05-13T10:50:40.492495" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.459447" elapsed="0.033048"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.492495" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.492495" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.492495" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:40.492495" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:40.492495" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:40.492495" level="INFO">Typing text '04' into text field 'id:month'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.492495" elapsed="0.206592"/>
+</kw>
+<arg>id:month</arg>
+<arg>04</arg>
+<status status="PASS" start="2025-05-13T10:50:40.459447" elapsed="0.243944"/>
+</kw>
+<kw name="Smart Input Text" owner="self_healing">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.706521" elapsed="0.038456"/>
+</kw>
+<msg time="2025-05-13T10:50:40.744977" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.706521" elapsed="0.038456"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == 'False'">
+<kw name="Log" owner="BuiltIn">
+<arg>Element not visible, refreshing page...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.744977" elapsed="0.000000"/>
+</kw>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.744977" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-05-13T10:50:40.744977" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-13T10:50:40.744977" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-13T10:50:40.744977" elapsed="0.000000"/>
+</if>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:40.744977" level="INFO">Typing text '2025' into text field 'id:year'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.744977" elapsed="0.130548"/>
+</kw>
+<arg>id:year</arg>
+<arg>2025</arg>
+<status status="PASS" start="2025-05-13T10:50:40.703391" elapsed="0.173914"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:40.877305" level="INFO">Clicking button 'xpath://button[text()='Purchase']'.</msg>
+<arg>xpath://button[text()='Purchase']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-13T10:50:40.877305" elapsed="0.181402"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-13T10:50:41.081688" level="INFO">Current page contains text 'Thank you for your purchase!'.</msg>
+<arg>Thank you for your purchase!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-13T10:50:41.058707" elapsed="0.022981"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-13T10:50:41.081688" elapsed="2.272253"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-13T10:50:48.357514" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-13T10:50:43.356695" elapsed="5.000819"/>
+</kw>
+<status status="PASS" start="2025-05-13T10:50:25.088666" elapsed="23.268848"/>
+</test>
+<status status="PASS" start="2025-05-13T10:50:25.071624" elapsed="23.285890"/>
+</suite>
+<status status="PASS" start="2025-05-13T10:48:47.904820" elapsed="120.473353"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="6" fail="0" skip="0">Tests</stat>
+<stat name="1 Login Tests" id="s1-s1" pass="1" fail="0" skip="0">Tests.1 Login Tests</stat>
+<stat name="2 Db Validation Tests" id="s1-s2" pass="1" fail="0" skip="0">Tests.2 Db Validation Tests</stat>
+<stat name="3 Product Search Tests" id="s1-s3" pass="1" fail="0" skip="0">Tests.3 Product Search Tests</stat>
+<stat name="4 Cart Tests" id="s1-s4" pass="1" fail="0" skip="0">Tests.4 Cart Tests</stat>
+<stat name="5 Checkout Tests" id="s1-s5" pass="1" fail="0" skip="0">Tests.5 Checkout Tests</stat>
+<stat name="6 Order Validation Tests" id="s1-s6" pass="1" fail="0" skip="0">Tests.6 Order Validation Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-13T10:48:54.914453" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-13T10:49:21.821215" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-13T10:49:43.592196" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-13T10:50:05.970298" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-13T10:50:30.397238" level="WARN">The chromedriver version (135.0.7049.97) detected in PATH at C:\webdriver\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

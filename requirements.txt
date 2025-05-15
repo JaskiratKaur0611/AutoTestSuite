@@ -1,0 +1,4 @@
+allure-robotframework
+psycopg2-binary
+robotframework-databaselibraray
+robotframework-seleniumlibraray
